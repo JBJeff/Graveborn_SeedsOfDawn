@@ -1,17 +1,21 @@
-import "@/once-ui/styles/index.scss";
+import "@/once-ui/styles/index.scss"; // styles importieren
 import "@/once-ui/tokens/index.scss";
 
+// Hilfsfunktion, um CSS-Klassen dynamisch zusammenzusetzen.
 import classNames from "classnames";
-
+//Eigene Projekt-Komponenten (Header, Footer, RouteGuard = Zugriffsschutz)
 import { Footer, Header, RouteGuard } from "@/components";
 import { baseURL, effects, style } from "@/app/resources";
 
+//Google Fonts werden eingebunden (und als CSS-Variablen gespeichert).
 import { Inter } from "next/font/google";
 import { Source_Code_Pro } from "next/font/google";
 
 import { person, home } from "@/app/resources/content";
 import { Background, Column, Flex, ToastProvider } from "@/once-ui/components";
-
+import { GravebornHeader } from "@/components/main/GravebornHeader";
+//Liefert SEO-Infos wie Title, Beschreibung, Open Graph (für Social Media Vorschau).
+// Diese Daten werden beim Rendern der Seite an den Browser oder Crawler geliefert.
 export async function generateMetadata() {
   return {
     metadataBase: new URL(`https://${baseURL}`),
@@ -38,7 +42,8 @@ export async function generateMetadata() {
     },
   };
 }
-
+//Die Schriftarten werden geladen und als CSS-Variablen verfügbar gemacht.
+// Es gibt Platz für weitere Fonts (secondary, tertiary), ist aber noch nicht genutzt.
 const primary = Inter({
   variable: "--font-primary",
   subsets: ["latin"],
@@ -67,7 +72,7 @@ const code = Source_Code_Pro({
 interface RootLayoutProps {
   children: React.ReactNode;
 }
-
+//children = der eigentliche Seiteninhalt, der in das Layout eingebettet wird.
 export default async function RootLayout({ children }: RootLayoutProps) {
   return (
     <Flex
@@ -140,7 +145,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             }}
           />
           <Flex fillWidth minHeight="16"></Flex>
-          <Header />
+          <GravebornHeader />  {/* Header ist die Navigationsleiste, die auf jeder Seite angezeigt wird. */}
           <Flex
             position="relative"
             zIndex={0}
@@ -151,7 +156,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             flex={1}
           >
             <Flex horizontal="center" fillWidth minHeight="0">
-              <RouteGuard>{children}</RouteGuard>
+              <RouteGuard>{children}</RouteGuard> {/* Alle Pages in den man navigieren kann */}
             </Flex>
           </Flex>
           <Footer />

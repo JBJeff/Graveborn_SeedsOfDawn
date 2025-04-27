@@ -1,6 +1,10 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import * as cookie from "cookie";
-
+ 
+/*Diese API-Route erlaubt nur POST-Anfragen. 
+Wenn das eingegebene Passwort mit einem geheimen Passwort übereinstimmt, wird ein sicheres Login-Cookie gesetzt. 
+Wenn nicht, gibt es eine Fehlermeldung zurück.
+*/
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "POST") {
     const { password } = req.body;
