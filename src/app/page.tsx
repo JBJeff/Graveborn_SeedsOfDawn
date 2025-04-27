@@ -4,7 +4,7 @@ import { Heading, Flex, Text, Button, Avatar, RevealFx, Arrow, Column,Card,Smart
 import { Projects } from "@/components/work/Projects";
 
 import { baseURL, routes } from "@/app/resources";
-import { home, about, person, newsletter } from "@/app/resources/content";
+import { home, about, person, newsletter } from "@/app/resources/content/de.js";
 import { Mailchimp } from "@/components";
 import { Posts } from "@/components/blog/Posts";
 
@@ -109,12 +109,46 @@ export default function Home() {
 </Column>
 
       {/* Jetzt kommt eine Row, Zwei kombonetenn 1. Kurze Beschreibung über das Spiel 2. Ein Bild mit ein Play Button welches ein Video Abspielt */}
+      {/* Beschreibung : 
+                      Verlassene Städte, vergessene Felder, gebrochene Träume.
 
+                      Errichte dein eigenes Zuhause, belebe ein vergessenes Dorf –
+                      entdecke, was einst verloren war, und schmiede dein eigenes Schicksal
 
+                      Dies ist der Anfang deiner neuen Reise. */}
 
 
 
       {/* Jetzt kommt eine Sektion wo die Jeweils ein Gameplay element aufzählt(Titel,Beschreibung) + daneben ein Bild davon und das als Row eingebet in Column */}
+
+      
+      {/* Quests & Storytelling 
+          Enthülle die Geheimnisse der zerstörten Welt durch Erkundung und Entdeckungen.
+      */}
+
+      {/* Dorfwachstum
+          Baue das Dorf auf und betreibe Handel.*/}
+
+      {/*  Charaktere & Beziehungen
+        Finde überlebende, baue Freundschaften auf und finde die Liebe.*/}
+
+        {/* Farm- und Aufbausystem
+      Baue deine eigene Farm auf, erweitere dein Zuhause und gestalte dein Leben  */}
+
+      {/* Handwerk und Sammeln
+          "Sammle Ressourcen, finde neue Gegenstände und erweitere deine Möglichkeiten." */}
+      
+      {/* Kämpfe und Herausforderungen
+        Stelle dich den Herausforderungen der Welt und kämpfe gegen die Kreaturen. */}
+      
+      {/*  Entscheide selbst:
+           Suche Abenteuer oder genieße einfach dein Dorf- und Farmlife.
+      */}
+
+
+
+
+
 
       {/* Hintergrund geschichte, ZeitStrahl, verdeutlichen das es der Anfang der Gschichte Ist! Vorbild wie auf the Witcher Seite */}
 
@@ -139,8 +173,8 @@ export default function Home() {
               {home.subline}
             </Text>
           </RevealFx> 
-           {/* Button zum About-Bereich, ebenfalls animiert */}
-          <RevealFx translateY="12" delay={0.4} horizontal="start">
+           
+          {/* <RevealFx translateY="12" delay={0.4} horizontal="start">
             <Button
               id="about"
               data-border="rounded"
@@ -151,7 +185,7 @@ export default function Home() {
             >
 
               <Flex gap="8" vertical="center">
-                 {/* Optional: Avatar vor dem Button-Text anzeigen, eingeloggt?  */}
+                
                 {about.avatar.display && (
                   <Avatar
                     style={{ marginLeft: "-0.75rem", marginRight: "0.25rem" }}
@@ -162,11 +196,11 @@ export default function Home() {
                 {about.title}
               </Flex>
             </Button>
-          </RevealFx> 
+          </RevealFx>  */}
         </Column>
       </Column>
 
-{/* ab Hier Block */}
+      {/* ab Hier Blog */}
 
       <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />

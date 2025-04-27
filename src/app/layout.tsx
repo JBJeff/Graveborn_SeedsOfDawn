@@ -11,7 +11,7 @@ import { baseURL, effects, style } from "@/app/resources";
 import { Inter } from "next/font/google";
 import { Source_Code_Pro } from "next/font/google";
 
-import { person, home } from "@/app/resources/content";
+import { person, home } from "@/app/resources/content/de.js";
 import { Background, Column, Flex, ToastProvider } from "@/once-ui/components";
 import { GravebornHeader } from "@/components/main/GravebornHeader";
 //Liefert SEO-Infos wie Title, Beschreibung, Open Graph (für Social Media Vorschau).
