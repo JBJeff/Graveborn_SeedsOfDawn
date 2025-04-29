@@ -97,6 +97,24 @@ export const GravebornHeader = () => {
             
             horizontal="center"
           >
+             {/* 🏠 Home */}
+             
+             {/* Welt */}
+          
+             {/* News */}
+             
+             {/* Update-Log */}
+             
+             {/* Galerie */}
+             
+              {/* FAQ */}
+
+              {/* Kontakt */}
+              
+              {/* TEAM */}
+
+              {/* SPÄTER = Demo spielen */}
+
             {/* Navigation innerhalb der Flexbox */}
             <Flex gap="4" vertical="center" textVariant="body-default-s">
               {/* Home-Button: Zeigt nur, wenn in routes definiert und ist aktiv, wenn auf der Startseite */}

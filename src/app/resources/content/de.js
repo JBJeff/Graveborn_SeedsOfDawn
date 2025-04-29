@@ -14,13 +14,13 @@ const person = {
 
 const newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Abonniere unseren Newsletter</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      Um die magische Welt von Graveborn nicht mehr zu entkommen
     </>
   ),
+  buttonLabel: "Bestätigen",
 };
 
 const social = [
@@ -50,8 +50,8 @@ const social = [
 
 const home = {
   label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
+  title: "`Graveborn",
+  description: "Landingpage for a game project",
   headline: <>Gameplay</>,
   subline: (
     <>

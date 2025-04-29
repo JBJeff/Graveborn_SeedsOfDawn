@@ -16,6 +16,7 @@ type NewsletterProps = {
   display: boolean;
   title: string | JSX.Element;
   description: string | JSX.Element;
+  buttonLabel: string;
 };
 
 export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
@@ -181,8 +182,8 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
           </div>
           <div className="clear">
             <Flex height="48" vertical="center">
-              <Button id="mc-embedded-subscribe" value="Subscribe" size="m" fillWidth>
-                Subscribe
+              <Button id="mc-embedded-subscribe" value={newsletter.buttonLabel} size="m" fillWidth>
+                {newsletter.buttonLabel}
               </Button>
             </Flex>
           </div>

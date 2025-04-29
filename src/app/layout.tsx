@@ -11,7 +11,7 @@ import { baseURL, effects, style } from "@/app/resources";
 import { Inter } from "next/font/google";
 import { Source_Code_Pro } from "next/font/google";
 
-import { person, home } from "@/app/resources/content/de.js";
+import { person, home } from "@/app/resources/content/de";
 import { Background, Column, Flex, ToastProvider } from "@/once-ui/components";
 import { GravebornHeader } from "@/components/main/GravebornHeader";
 //Liefert SEO-Infos wie Title, Beschreibung, Open Graph (für Social Media Vorschau).
@@ -19,13 +19,13 @@ import { GravebornHeader } from "@/components/main/GravebornHeader";
 export async function generateMetadata() {
   return {
     metadataBase: new URL(`https://${baseURL}`),
-    title: home.title,
-    description: home.description,
+    title: "Graveborn",
+    description: "Landingpage showcasing my work as Gamedev and Artist.",
     openGraph: {
-      title: `${person.firstName}'s Portfolio`,
-      description: "Portfolio website showcasing my work.",
+      title: "Graveborn",
+      description: "Landingpage showcasing my work as Gamedev and Artist.",
       url: baseURL,
-      siteName: `${person.firstName}'s Portfolio`,
+      siteName: "Graveborn",
       locale: "en_US",
       type: "website",
     },
