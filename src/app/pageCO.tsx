@@ -105,7 +105,6 @@ export default function Home() {
       </Card>
     </Column>
   </Flex>
-
 </Column>
 
       {/* Jetzt kommt eine Row, Zwei kombonetenn 1. Kurze Beschreibung über das Spiel 2. Ein Bild mit ein Play Button welches ein Video Abspielt */}
@@ -162,62 +161,39 @@ export default function Home() {
       <Column fillWidth paddingY="l" gap="m">
         <Column maxWidth="s">
         {/* Header animiert wenn man drauf ist */}
-          {/* <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="m">
+          <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="m">
             <Heading wrap="balance" variant="display-strong-l">
               {home.headline}
             </Heading> 
-          </RevealFx>  */}
+          </RevealFx> 
            {/* text animiert erscheinen lassen mit Verzögerung, delay */}
-           {/* <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom="m">
+           <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom="m">
             <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
               {home.subline}
             </Text>
-          </RevealFx>  */}
-           
-          {/* <RevealFx translateY="12" delay={0.4} horizontal="start">
-            <Button
-              id="about"
-              data-border="rounded"
-              href="/about"
-              variant="secondary"
-              size="m"
-              arrowIcon
-            >
-
-              <Flex gap="8" vertical="center">
-                
-                {about.avatar.display && (
-                  <Avatar
-                    style={{ marginLeft: "-0.75rem", marginRight: "0.25rem" }}
-                    src={person.avatar}
-                    size="m"
-                  />
-                )}
-                {about.title}
-              </Flex>
-            </Button>
-          </RevealFx>  */}
+          </RevealFx> 
         </Column>
       </Column>
 
       {/* ab Hier Blog */}
 
-      {/* <RevealFx translateY="16" delay={0.6}>
-        <Projects range={[1, 1]} />
-      </RevealFx> */}
+      {/* <RevealFx translateY="16" delay={0.6}> */}
+        {/* <Projects range={[1, 1]} /> */}
+      {/* </RevealFx> */}
        {/* Optional: Wenn Blog existiert, dann neuesten Blog-Post Bereich anzeigen */}
-      {/* {routes["/blog"] && (
+      {routes["/blog"] && (
         <Flex fillWidth gap="24" mobileDirection="column">
           <Flex flex={1} paddingLeft="l">
             <Heading as="h2" variant="display-strong-xs" wrap="balance">
-              NA HÖR MAAAAA
+              Random Text Loerm Ipsum
             </Heading>
           </Flex>
           <Flex flex={3} paddingX="20">
-            <Posts range={[1, 2]} columns="2" />
+            {/* <Posts range={[1, 2]} columns="2" /> */}
           </Flex>
         </Flex>
-      )} */}
+      )}
+
       {/* Optional: Wenn Newsletter existiert, dann Mailchimp-Formular anzeigen */}
       {/* <Projects range={[2]} /> */}
       {newsletter.display && <Mailchimp newsletter={newsletter} />}
