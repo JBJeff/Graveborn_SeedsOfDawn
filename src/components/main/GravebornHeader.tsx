@@ -99,8 +99,8 @@ export const GravebornHeader = () => {
           >
              {/* 🏠 Home */}
              
-             {/* Welt */}
-          
+             
+
              {/* News */}
              
              {/* Update-Log */}
@@ -141,6 +141,29 @@ export const GravebornHeader = () => {
                   />
                 </>
               )}
+              <Line vert maxHeight="24" />
+              {/* Welt */}
+
+              {routes["/world"] && (
+                <>
+                  <ToggleButton
+                    className="s-flex-hide"
+                    prefixIcon="person"
+                    href="/world"
+                    label={about.label}
+                    selected={pathname === "/world"}
+                  />
+                  <ToggleButton
+                    className="s-flex-show"
+                    prefixIcon="person"
+                    href="/world"
+                    selected={pathname === "/world"}
+                  />
+                </>
+              )}
+
+
+
               {/* Work Button */}
               {routes["/work"] && (
                 <>
