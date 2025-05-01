@@ -1,5 +1,8 @@
 import { InlineCode } from "@/once-ui/components";
 
+
+
+// #region Old Stuff
 const person = {
   firstName: "Selene",
   lastName: "Yu",
@@ -280,5 +283,5 @@ const gallery = {
     },
   ],
 };
-
+// #endregion
 export { person, social, newsletter, home, about, blog, work, gallery };

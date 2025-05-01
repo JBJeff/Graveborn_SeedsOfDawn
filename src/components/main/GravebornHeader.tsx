@@ -98,20 +98,16 @@ export const GravebornHeader = () => {
             horizontal="center"
           >
              {/* 🏠 Home */}
-             
-             
+            
+             {/* BLOG | News + Updates + Devlogs zentral in einer Seite, Tags */}
 
-             {/* News */}
+             {/* Galerie | Visuals: Screenshots, Artworks, Animationen, evtl. in Tabs */} 
              
-             {/* Update-Log */}
-             
-             {/* Galerie */}
-             
-              {/* FAQ */}
-
-              {/* Kontakt */}
+              {/* FAQ | Häufige Fragen, Systemanforderungen, Installationshinweise*/} 
               
-              {/* TEAM */}
+              {/* TEAM | Credits, Bilder, Rollen , immer ich mit verschiedenen Haaren und OUTFITS*/}
+
+              {/* Kontakt | Mail, Discord, Socials, evtl. Kontaktformular */}
 
               {/* SPÄTER = Demo spielen */}
 
