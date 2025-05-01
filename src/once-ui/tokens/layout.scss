@@ -1,3 +1,20 @@
+/* ==========================================================================
+   SPACING, WIDTH & HEIGHT TOKENS (STATIC, RESPONSIVE, SCALING)
+   --------------------------------------------------------------------------
+   Dieser Abschnitt definiert zentrale Design-Tokens für feste Abstände
+   (static-space), Breiten und Höhen. Diese Werte werden über SCSS-Variablen
+   wie --static-space-16 oder --static-width-1440 global bereitgestellt.
+
+   Zusätzlich werden responsive Alternativen definiert, die sich an Breakpoints
+   anpassen (z. B. --responsive-space-m). Über media queries wie (--s) und (--m)
+   lassen sich diese dynamisch umschalten.
+
+   Durch `[data-scaling="..."]` lassen sich alle statischen Werte global
+   hoch- oder runterskalieren, um z. B. die gesamte UI kompakt oder großzügig
+   erscheinen zu lassen. Das ist nützlich für Accessibility, Density-Tuning
+   und benutzerdefinierte Darstellungsmodi.
+   ========================================================================= */
+
 :root {
     --static-space-0:   0;
     --static-space-1:   0.0625rem;

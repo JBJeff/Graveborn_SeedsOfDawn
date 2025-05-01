@@ -1,5 +1,14 @@
-const baseURL = "demo.magic-portfolio.com";
 
+
+// ===============================================================
+// 📦 CONFIG: Zentrale Konfigurationsdatei für globale Seitenrouten,
+// Theme-Design, visuelle Effekte, Anzeigeoptionen und Mailchimp.
+// Diese Werte steuern das visuelle Verhalten und die Struktur
+// der gesamten App (z. B. Layout.tsx via `data-*` Attributen).
+// ===============================================================
+const baseURL = "https://www.youtube.com/"; //// Basis-URL für Sitemap, OG-Metadaten etc.
+
+//Routen der Websites
 const routes = {
   "/": true,
   "/about": true,
@@ -9,24 +18,36 @@ const routes = {
   "/world": true
 };
 
-// Enable password protection on selected routes
-// Set password in the .env file, refer to .env.example
+//
+// Zugriffsschutz (Passwort)
+// Aktiviert Passwortschutz für einzelne Routen (optional)
+// Passwort muss in `.env` definiert werden (in `.env.example`)
+//
 const protectedRoutes = {
   "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
 };
 
+//
+// Visuelles Theme
+// Steuert ZENTRAL Farbgebung, Rundungen, Oberflächenverhalten etc., werden 
+//
 const style = {
   theme: "dark", // dark | light
-  neutral: "gray", // sand | gray | slate
-  brand: "emerald", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-  accent: "orange", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-  solid: "contrast", // color | contrast
-  solidStyle: "flat", // flat | plastic
-  border: "playful", // rounded | playful | conservative
-  surface: "translucent", // filled | translucent
-  transition: "all", // all | micro | macro
+  neutral: "gray", //sand | gray | slate Neutrale Farbe: z. B. für Hintergrund 
+  brand: "emerald", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan = Hauptmarkenfarbe
+  accent: "orange", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan = Akzentfarbe für Highlights
+  solid: "contrast", // color | contrast =  Farbkontrast bei Flächen: "color" = Markenfarbe, "contrast" = Hintergrundabhängig
+  solidStyle: "flat", // flat | plastic = Stil von Buttons, Tags etc.:
+  border: "playful", // rounded | playful | conservative = Border-Radius-Theme
+  surface: "translucent", // filled | translucent = Oberflächenstil
+  transition: "all", // all | micro | macro =  Animationstyp: "micro" = UI-Details, "macro" = große Übergänge, "all"
 };
 
+
+//
+// Visuelle Effekte (Hintergrund-Animationen, Maskierungen, Deko)
+// Gesteuert z. B. im Layout → <Background ... />
+//
 const effects = {
   mask: {
     cursor: true,
@@ -63,13 +84,22 @@ const effects = {
   },
 };
 
+//
+// UI-Anzeigen im Header
+//
 const display = {
   location: true,
   time: true,
 };
 
+
+//
+// Mailchimp Newsletter-Konfiguration
+// Steuert Formulareffekte und Action-URL
+// TODO: ersetzen dur Hubspot oder Odoo
+//
 const mailchimp = {
-  action: "https://url/subscribe/post?parameters",
+  action: "https://url/subscribe/post?parameters", // URL zum Mailchimp-Formular
   effects: {
     mask: {
       cursor: false,

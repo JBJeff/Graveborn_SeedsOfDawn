@@ -1,3 +1,19 @@
+/* ==========================================================================
+   BORDER RADIUS TOKENS (Theme-basiert via [data-border])
+   --------------------------------------------------------------------------
+   Diese Klasse definiert zentrale CSS-Variablen für Border-Radius-Werte
+   je nach aktivem Design-Stil: "playful", "conservative" oder "rounded".
+
+   Die Tokens wie --radius-s oder --radius-l-nest-4 steuern, wie rund UI-
+   Komponenten dargestellt werden – z. B. Buttons, Cards, Modals usw.
+
+   Durch das Setzen von [data-border="..."] im config.js kann das visuelle
+   Erscheinungsbild der Rundungen global gesteuert werden, ohne dass sich
+   Komponenten oder Styles direkt ändern müssen.
+
+   Ideal für Theme-Wechsel, Konsistenz und wartbares Design-System.
+   ========================================================================= */
+
 [data-border="playful"] {
     --radius-xs:        0.25rem;
     --radius-xs-nest-4: 0.375rem;

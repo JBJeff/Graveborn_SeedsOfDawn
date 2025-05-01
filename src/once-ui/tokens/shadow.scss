@@ -1,3 +1,17 @@
+/* ==========================================================================
+   SHADOW TOKENS – ELEVATION LEVELS (XS → XL)
+   --------------------------------------------------------------------------
+   Diese Variablen definieren ein abgestuftes Schatten-System zur Darstellung
+   von Tiefenebenen, Hover-Zuständen oder visuellem Fokus im UI.
+
+   Die Tokens reichen von `--shadow-xs` (feine Schatten für Inputs o. Icons)
+   bis `--shadow-xl` (starke Tiefe für Modals oder Overlays) und bestehen jeweils
+   aus mehreren Layern mit transparenter schwarzer Farbe.
+
+   Sie können über den Prop `shadow="s"` in Komponenten aktiviert und dynamisch
+   mit dem Design-System verknüpft werden.
+   ========================================================================= */
+
 :root {
     --shadow-xs: 0px 0px 1px rgba(0, 0, 0, 0.12), 0px 1px 2px  rgba(0, 0, 0, 0.08),  0px 2px 4px   rgba(0, 0, 0, 0.08);
     --shadow-s:  0px 0px 2px rgba(0, 0, 0, 0.12), 0px 1px 4px  rgba(0, 0, 0, 0.08),  0px 4px 8px   rgba(0, 0, 0, 0.08);

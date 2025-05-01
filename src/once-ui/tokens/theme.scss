@@ -1,3 +1,21 @@
+/* ==========================================================================
+   THEME TOKENS – COLOR, TYPOGRAPHY, TRANSITION, SURFACE, SOLID-STYLES
+   --------------------------------------------------------------------------
+   Dieser Abschnitt definiert zentrale Theme-abhängige Design-Tokens wie:
+
+   • Farben: Hintergrund, Schrift, Rahmen – je nach Theme ("light" / "dark")
+   • Schriften: Primäre Font-Familien & Skalierungen für body, heading, label
+   • Transitions: Mikro- & Makroanimationen für UI-Bewegung
+   • Surface: Hintergrundverhalten wie "filled" oder "translucent" mit Blur
+   • Solid-Stil: Farbe, Kontrast oder inverse Varianten für z. B. Buttons
+
+   Die Kombination aus `[data-theme]`, `[data-surface]`, `[data-solid]` usw.
+   erlaubt ein vollständig konfigurierbares Design-System über CSS Custom Properties.
+
+   Die Tokens werden automatisch in Komponenten wie `<Box>`, `<Card>`, `<Button>` usw.
+   übernommen – und sorgen für konsistente, responsive und dynamische Gestaltung.
+   ========================================================================= */
+
 :root {
     /* FONT FAMILY */
     --font-family-body:     var(--font-primary);

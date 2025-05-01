@@ -1,3 +1,19 @@
+/* ==========================================================================
+   COLOR SCHEME TOKENS – STATIC & BASE SCHEMES
+   --------------------------------------------------------------------------
+   Dieser Abschnitt definiert alle statischen und basisfarbenbasierten Farb-Tokens,
+   die als Grundlage für Theme-Farben wie `neutral`, `brand`, `accent`, `info`,
+   `danger`, `success`, `warning` usw. dienen.
+
+   Jede Farbreihe (z. B. `--scheme-gray-100` bis `--scheme-gray-1200`) enthält fein
+   abgestufte Varianten für helle, mittlere und dunkle Anwendungsfälle – inklusive
+   Alphaversionen (-10, -30, -50) für Transparenz-Effekte.
+
+   Diese Farbwerte werden später in funktionale Tokens wie `--function-danger-600` oder
+   `--function-brand-500` gemappt – und ermöglichen so konsistentes, skalierbares
+   Farb-Design über das gesamte UI hinweg.
+   ========================================================================= */
+   
 :root {
     /* STATIC */
     --static-transparent: #00000000;

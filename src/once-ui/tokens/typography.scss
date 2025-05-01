@@ -1,3 +1,20 @@
+/* ==========================================================================
+   TYPOGRAPHY TOKENS – FONT WEIGHT, SIZE & LINE HEIGHT
+   --------------------------------------------------------------------------
+   Dieser Abschnitt definiert zentrale Design-Tokens für Typografie: 
+   Schriftgewichte (`--font-weight-*`), Schriftgrößen (`--font-size-*`) 
+   und Zeilenhöhen (`--line-height-*`) für Textarten wie Body, Heading, 
+   Display, Label und Code.
+
+   Die Werte sind für verschiedene Textgrößen (xs bis xl) vordefiniert 
+   und werden bei Bedarf über Medienabfragen (`--m`, `--s`) responsiv 
+   angepasst.
+
+   Durch diese zentralen Tokens lassen sich Textkomponenten einheitlich,
+   skalierbar und dynamisch gestalten – mit vollem Support für Themes 
+   und Viewport-Wechsel.
+   ========================================================================= */
+
 :root {
     /* FONT WEIGHT */
     --font-weight-thin:            100;

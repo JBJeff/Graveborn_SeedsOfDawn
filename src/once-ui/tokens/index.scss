@@ -1,3 +1,15 @@
+/* ==========================================================================
+   DESIGN TOKEN ENTRYPOINT – index.scss
+   --------------------------------------------------------------------------
+   Diese Datei dient als zentraler Einstiegspunkt für das Design-Token-System
+   und bündelt alle thematisch strukturierten SCSS-Dateien – darunter Farben,
+   Layout, Typografie, Schatten und Border-Radius – mithilfe von `@use`.
+
+   Dadurch werden sämtliche CSS-Variablen global verfügbar gemacht und bilden
+   die stilistische Grundlage für das gesamte UI. Die Datei ermöglicht eine
+   modulare, skalierbare und konsistente Gestaltung im gesamten Projekt.
+   ========================================================================= */
+
 @use "@/once-ui/tokens/scheme.scss";
 @use "@/once-ui/tokens/function.scss";
 @use "@/once-ui/tokens/layout.scss";

@@ -1,3 +1,18 @@
+/* ==========================================================================
+   FUNCTION COLOR TOKENS (info, warning, danger, success, brand, accent, neutral)
+   --------------------------------------------------------------------------
+   Dieses Token-Set definiert funktionale Farben auf Basis des aktiven Themes.
+   Farbgruppen wie "info", "warning", "danger" oder "success" nutzen vordefinierte
+   Farbverläufe (100–1200) sowie Alphavarianten (z. B. -10, -30, -50) aus dem jeweiligen
+   Farb-Scheme.
+
+   Die Tokens werden über [data-brand], [data-accent], [data-neutral] gesteuert und
+   dynamisch auf Variablen wie --function-brand-500 oder --function-danger-600 gemappt.
+
+   Sie ermöglichen einheitliche Farbnutzung für Statusanzeigen, Komponenten und Hintergründe
+   mit vollem Theme-Support.
+   ========================================================================= */
+
 :root {
     /* FUNCTION */
     /* info */
