@@ -1,7 +1,97 @@
 import { InlineCode } from "@/once-ui/components";
 
+// #region Old Stuff
+  const gravebornBlog = {
+      label: "Graveborn Blog",
+      title: "Informationen über Updates, neue features und News",
+      description: "Lese die Neuheiten von Graveborn!",
 
+      // Create new blog posts by adding a new .mdx file to app/blog/posts
+      // All posts will be listed on the /blog route
+    
+  };
 
+  const gravebornGalerie = {
+    label: "Graveborn Gallerie",
+    title: "Sammlung von Bildern und Zeichnungen",
+    description: "Schaue dir die Bilder von Graveborn an!",
+// Images from https://pexels.com
+//ändern!
+images: [
+  {
+    src: "/images/gallery/img-01.jpg",
+    alt: "image",
+    orientation: "vertical",
+  },
+  {
+    src: "/images/gallery/img-02.jpg",
+    alt: "image",
+    orientation: "horizontal",
+  },
+  {
+    src: "/images/gallery/img-03.jpg",
+    alt: "image",
+    orientation: "vertical",
+  },
+  {
+    src: "/images/gallery/img-04.jpg",
+    alt: "image",
+    orientation: "horizontal",
+  },
+  {
+    src: "/images/gallery/img-05.jpg",
+    alt: "image",
+    orientation: "horizontal",
+  },
+  {
+    src: "/images/gallery/img-06.jpg",
+    alt: "image",
+    orientation: "vertical",
+  },
+  {
+    src: "/images/gallery/img-07.jpg",
+    alt: "image",
+    orientation: "horizontal",
+  },
+  {
+    src: "/images/gallery/img-08.jpg",
+    alt: "image",
+    orientation: "vertical",
+  },
+  {
+    src: "/images/gallery/img-09.jpg",
+    alt: "image",
+    orientation: "horizontal",
+  },
+  {
+    src: "/images/gallery/img-10.jpg",
+    alt: "image",
+    orientation: "horizontal",
+  },
+  {
+    src: "/images/gallery/img-11.jpg",
+    alt: "image",
+    orientation: "vertical",
+  },
+  {
+    src: "/images/gallery/img-12.jpg",
+    alt: "image",
+    orientation: "horizontal",
+  },
+  {
+    src: "/images/gallery/img-13.jpg",
+    alt: "image",
+    orientation: "horizontal",
+  },
+  {
+    src: "/images/gallery/img-14.jpg",
+    alt: "image",
+    orientation: "horizontal",
+  },
+], 
+};
+
+// #endregion
 // #region Old Stuff
 const person = {
   firstName: "Selene",
@@ -284,4 +374,4 @@ const gallery = {
   ],
 };
 // #endregion
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, blog, work, gallery, gravebornBlog };

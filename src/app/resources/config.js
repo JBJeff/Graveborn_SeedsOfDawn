@@ -11,11 +11,16 @@ const baseURL = "https://www.youtube.com/"; //// Basis-URL für Sitemap, OG-Meta
 //Routen der Websites
 const routes = {
   "/": true,
-  "/about": true,
-  "/work": true,
-  "/blog": true,
-  "/gallery": true,
-  "/world": true
+  "/about": true, //old
+  "/work": true,  //old
+  "/blog": true,  //old
+  "/gallery": true, // old
+  "/gravebornBlog": true, //new
+  "/gravebornGallery": true, //new
+  "/gravebornFAQ": true, //new
+  "/gravebornTeam": true,///new
+  "/contact": true///new
+  
 };
 
 //

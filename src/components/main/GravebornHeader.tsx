@@ -9,7 +9,7 @@ import styles from "@/components/Header.module.scss"; // Import der SCSS-Styles 
 // Dort wird die Ausrichtung für die Geräte definiert (z.B. sticky, fixed, etc.)
 
 import { routes, display } from "@/app/resources"; //// Importiert Konfigurationsdaten (z.B. welche Routen sichtbar sind, Einstellungen)
-import { person, home, about, blog, work, gallery } from "@/app/resources/content"; //// Importiert Inhalte/Textbausteine für Navigation (Label, Icons, etc.)
+import { person, home, about, blog, work, gallery,gravebornBlog } from "@/app/resources/content/de"; // Importiert Inhalte/Textbausteine für Navigation (Label, Icons, etc.)
 
 type TimeDisplayProps = {
   timeZone: string;
@@ -97,10 +97,38 @@ export const GravebornHeader = () => {
             
             horizontal="center"
           >
-             {/* 🏠 Home */}
+             
+
+            {/* Navigation innerhalb der Flexbox */}
+            <Flex gap="4" vertical="center" textVariant="body-default-s">
+              {/* Home-Button: Zeigt nur, wenn in routes definiert und ist aktiv, wenn auf der Startseite */}
+              {/* 🏠 Home */}
+              {routes["/"] && (
+                <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
+              )}
+              {/* Trennlinie */}
+              <Line vert maxHeight="24" />
+              
             
              {/* BLOG | News + Updates + Devlogs zentral in einer Seite, Tags */}
-
+             {routes["/gravebornBlog"] && (
+                <>
+                  <ToggleButton
+                    className="s-flex-hide"
+                    //prefixIcon="person"
+                    href="/gravebornBlog"
+                    label={gravebornBlog.label}
+                    selected={pathname === "/gravebornBlog"}
+                  />
+                  <ToggleButton
+                    className="s-flex-show"
+                    //prefixIcon="person"
+                    href="/gravebornBlog"
+                    selected={pathname === "/gravebornBlog"}
+                  />
+                </>
+              )}
+              <Line vert maxHeight="24" />
              {/* Galerie | Visuals: Screenshots, Artworks, Animationen, evtl. in Tabs */} 
              
               {/* FAQ | Häufige Fragen, Systemanforderungen, Installationshinweise*/} 
@@ -110,15 +138,6 @@ export const GravebornHeader = () => {
               {/* Kontakt | Mail, Discord, Socials, evtl. Kontaktformular */}
 
               {/* SPÄTER = Demo spielen */}
-
-            {/* Navigation innerhalb der Flexbox */}
-            <Flex gap="4" vertical="center" textVariant="body-default-s">
-              {/* Home-Button: Zeigt nur, wenn in routes definiert und ist aktiv, wenn auf der Startseite */}
-              {routes["/"] && (
-                <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
-              )}
-              {/* Trennlinie */}
-              <Line vert maxHeight="24" />
               {/* About Button (Desktop & Mobile Varianten) */}
               {routes["/about"] && (
                 <>
