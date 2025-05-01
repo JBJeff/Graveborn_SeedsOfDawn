@@ -29,6 +29,10 @@ export async function generateMetadata() {
       locale: "en_US",
       type: "website",
     },
+    icons: {
+      icon: "/GravebornLogo.png",
+      //apple: "/apple-touch-icon.png"
+    },
     robots: {
       index: true,
       follow: true,
