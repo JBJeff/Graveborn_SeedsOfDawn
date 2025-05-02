@@ -9,7 +9,7 @@ import styles from "@/components/Header.module.scss"; // Import der SCSS-Styles 
 // Dort wird die Ausrichtung für die Geräte definiert (z.B. sticky, fixed, etc.)
 
 import { routes, display } from "@/app/resources"; //// Importiert Konfigurationsdaten (z.B. welche Routen sichtbar sind, Einstellungen)
-import { person, home, about, blog, work, gallery,gravebornBlog } from "@/app/resources/content/de"; // Importiert Inhalte/Textbausteine für Navigation (Label, Icons, etc.)
+import { person, home, about, blog, work, gallery,codex } from "@/app/resources/content/de"; // Importiert Inhalte/Textbausteine für Navigation (Label, Icons, etc.)
 
 type TimeDisplayProps = {
   timeZone: string;
@@ -108,42 +108,33 @@ export const GravebornHeader = () => {
               )}
               {/* Trennlinie */}
               <Line vert maxHeight="24" />
-              
-            
+             
+             
              {/* BLOG | News + Updates + Devlogs zentral in einer Seite, Tags */}
-             {routes["/gravebornblog"] && (
+              {routes["/blog"] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
-                    //prefixIcon="person"
-                    href="/gravebornblog"
-                    label={gravebornBlog.label}
-                    selected={pathname === "/gravebornblog"}
+                    //prefixIcon="book"
+                    href="/blog"
+                    label={blog.label}
+                    selected={pathname.startsWith("/blog")}
                   />
                   <ToggleButton
                     className="s-flex-show"
-                    //prefixIcon="person"
-                    href="/gravebornblog"
-                    selected={pathname === "/gravebornblog"}
+                    //prefixIcon="book"
+                    href="/blog"
+                    selected={pathname.startsWith("/blog")}
                   />
                 </>
               )}
               <Line vert maxHeight="24" />
-             {/* Galerie | Visuals: Screenshots, Artworks, Animationen, evtl. in Tabs */} 
-             
-              {/* FAQ | Häufige Fragen, Systemanforderungen, Installationshinweise*/} 
-              
               {/* TEAM | Credits, Bilder, Rollen , immer ich mit verschiedenen Haaren und OUTFITS*/}
-
-              {/* Kontakt | Mail, Discord, Socials, evtl. Kontaktformular */}
-
-              {/* SPÄTER = Demo spielen */}
-              {/* About Button (Desktop & Mobile Varianten) */}
               {routes["/about"] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
-                    prefixIcon="person"
+                    //prefixIcon="person"
                     href="/about"
                     label={about.label}
                     selected={pathname === "/about"}
@@ -156,16 +147,51 @@ export const GravebornHeader = () => {
                   />
                 </>
               )}
+               <Line vert maxHeight="24" />
+
+            {/* Galerie | Visuals: Screenshots, Artworks, Animationen, evtl. in Tabs */} 
+            {routes["/gallery"] && (
+                <>
+                  <ToggleButton
+                    className="s-flex-hide"
+                    //prefixIcon="gallery"
+                    href="/gallery"
+                    label={gallery.label}
+                    selected={pathname.startsWith("/gallery")}
+                  />
+                  <ToggleButton
+                    className="s-flex-show"
+                    prefixIcon="gallery"
+                    href="/gallery"
+                    selected={pathname.startsWith("/gallery")}
+                  />
+                </>
+              )}
+             
               <Line vert maxHeight="24" />
+             
+             
+              {/* FAQ | Häufige Fragen, Systemanforderungen, Installationshinweise*/}
+
+              
+              
+              
+
+              {/* Kontakt | Mail, Discord, Socials, evtl. Kontaktformular */}
+              
+              {/* SPÄTER = Demo spielen */}
+              {/* About Button (Desktop & Mobile Varianten) */}
+             
+             
               {/* Welt */}
 
               {routes["/world"] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
-                    prefixIcon="person"
+                    //prefixIcon="person"
                     href="/world"
-                    label={about.label}
+                    label={codex.label}
                     selected={pathname === "/world"}
                   />
                   <ToggleButton
@@ -197,42 +223,9 @@ export const GravebornHeader = () => {
                   />
                 </>
               )}
-              {/* Blog Button */}
-              {routes["/blog"] && (
-                <>
-                  <ToggleButton
-                    className="s-flex-hide"
-                    prefixIcon="book"
-                    href="/blog"
-                    label={blog.label}
-                    selected={pathname.startsWith("/blog")}
-                  />
-                  <ToggleButton
-                    className="s-flex-show"
-                    prefixIcon="book"
-                    href="/blog"
-                    selected={pathname.startsWith("/blog")}
-                  />
-                </>
-              )}
+              
               {/* Gallery Button */}
-              {routes["/gallery"] && (
-                <>
-                  <ToggleButton
-                    className="s-flex-hide"
-                    prefixIcon="gallery"
-                    href="/gallery"
-                    label={gallery.label}
-                    selected={pathname.startsWith("/gallery")}
-                  />
-                  <ToggleButton
-                    className="s-flex-show"
-                    prefixIcon="gallery"
-                    href="/gallery"
-                    selected={pathname.startsWith("/gallery")}
-                  />
-                </>
-              )}
+              
             </Flex>
           </Flex>
         </Flex>
@@ -253,3 +246,20 @@ export const GravebornHeader = () => {
     </>
   );
 };
+{/* {routes["/gravebornblog"] && (
+                <>
+                  <ToggleButton
+                    className="s-flex-hide"
+                    //prefixIcon="person"
+                    href="/gravebornblog"
+                    label={gravebornBlog.label}
+                    selected={pathname === "/gravebornblog"}
+                  />
+                  <ToggleButton
+                    className="s-flex-show"
+                    //prefixIcon="person"
+                    href="/gravebornblog"
+                    selected={pathname === "/gravebornblog"}
+                  />
+                </>
+              )} */}

@@ -15,6 +15,7 @@ const routes = {
   "/work": true,  //old
   "/blog": true,  //old
   "/gallery": true, // old
+  "/world" : true, // old
   "/gravebornblog": true, //new
   "/gravebornGallery": true, //new
   "/gravebornFAQ": true, //new

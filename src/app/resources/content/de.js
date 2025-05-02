@@ -1,94 +1,128 @@
 import { InlineCode } from "@/once-ui/components";
 
-// #region Old Stuff
-  const gravebornBlog = {
-      label: "Graveborn Blog",
-      title: "Informationen über Updates, neue features und News",
-      description: "Lese die Neuheiten von Graveborn!",
+const home = {
+  label: "Home",
+  title: "`Graveborn",
+  description: "Landingpage for a game project",
+  headline: <>Gameplay</>,
+  subline: (
+    <>
+      Finde die Ursache der Katastrophe und rette die Welt. <br />
+    </>
+  ),
+};
+  
 
-      // Create new blog posts by adding a new .mdx file to app/blog/posts
-      // All posts will be listed on the /blog route
-    
+  const blog = {
+    label: "Blog",
+    title: "Informationen über Updates, neue features und News",
+    description: "Lese die Neuheiten von Graveborn!",
+    // Create new blog posts by adding a new .mdx file to app/blog/posts
+    // All posts will be listed on the /blog route
   };
 
-  const gravebornGalerie = {
+  const gallery = {
     label: "Graveborn Gallerie",
     title: "Sammlung von Bildern und Zeichnungen",
     description: "Schaue dir die Bilder von Graveborn an!",
 // Images from https://pexels.com
 //ändern!
+
+
 images: [
   {
-    src: "/images/gallery/img-01.jpg",
+    src: "/LandschaftMiHeld.png",
     alt: "image",
     orientation: "vertical",
   },
   {
-    src: "/images/gallery/img-02.jpg",
+    src: "/LandschaftMiHeld.png",
     alt: "image",
     orientation: "horizontal",
   },
   {
-    src: "/images/gallery/img-03.jpg",
+    src: "/LandschaftMiHeld.png",
     alt: "image",
     orientation: "vertical",
   },
   {
-    src: "/images/gallery/img-04.jpg",
+    src: "/LandschaftMiHeld.png",
     alt: "image",
     orientation: "horizontal",
   },
   {
-    src: "/images/gallery/img-05.jpg",
+    src: "/LandschaftMiHeld.png",
     alt: "image",
     orientation: "horizontal",
   },
   {
-    src: "/images/gallery/img-06.jpg",
+    src: "/LandschaftMiHeld.png",
     alt: "image",
     orientation: "vertical",
   },
   {
-    src: "/images/gallery/img-07.jpg",
+    src: "/LandschaftMiHeld.png",
     alt: "image",
     orientation: "horizontal",
   },
   {
-    src: "/images/gallery/img-08.jpg",
+    src: "/LandschaftMiHeld.png",
     alt: "image",
     orientation: "vertical",
   },
   {
-    src: "/images/gallery/img-09.jpg",
+    src: "/LandschaftMiHeld.png",
     alt: "image",
     orientation: "horizontal",
   },
   {
-    src: "/images/gallery/img-10.jpg",
+    src: "/LandschaftMiHeld.png",
     alt: "image",
     orientation: "horizontal",
   },
   {
-    src: "/images/gallery/img-11.jpg",
+    src: "/LandschaftMiHeld.png",
     alt: "image",
     orientation: "vertical",
   },
   {
-    src: "/images/gallery/img-12.jpg",
+    src: "/LandschaftMiHeld.png",
     alt: "image",
     orientation: "horizontal",
   },
   {
-    src: "/images/gallery/img-13.jpg",
+    src: "/LandschaftMiHeld.png",
     alt: "image",
     orientation: "horizontal",
   },
   {
-    src: "/images/gallery/img-14.jpg",
+    src: "/LandschaftMiHeld.png",
     alt: "image",
     orientation: "horizontal",
   },
 ], 
+};
+
+
+const codex = {
+  label: "scrolls",
+  title: "Codex von Graveborn",
+  description: "Erfahre die Geheimnisse der Welt von Graveborn",
+
+  // Create new blog posts by adding a new .mdx file to app/blog/posts
+  // All posts will be listed on the /blog route
+
+};
+
+const newsletter = {
+  display: true,
+  title: <>Abonniere unseren Newsletter</>,
+  description: (
+    <>
+      Um die magische Welt von Graveborn nicht mehr zu entkommen
+    </>
+  ),
+  buttonLabel: "Bestätigen",
 };
 
 // #endregion
@@ -105,16 +139,6 @@ const person = {
   languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
 };
 
-const newsletter = {
-  display: true,
-  title: <>Abonniere unseren Newsletter</>,
-  description: (
-    <>
-      Um die magische Welt von Graveborn nicht mehr zu entkommen
-    </>
-  ),
-  buttonLabel: "Bestätigen",
-};
 
 const social = [
   // Links are automatically displayed.
@@ -141,20 +165,10 @@ const social = [
   },
 ];
 
-const home = {
-  label: "Home",
-  title: "`Graveborn",
-  description: "Landingpage for a game project",
-  headline: <>Gameplay</>,
-  subline: (
-    <>
-      Finde die Ursache der Katastrophe und rette die Welt. <br />
-    </>
-  ),
-};
+
 
 const about = {
-  label: "About",
+  label: "Team",
   title: "Über mich",
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
@@ -279,13 +293,7 @@ const about = {
   },
 };
 
-const blog = {
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
-};
+
 
 const work = {
   label: "Work",
@@ -295,83 +303,86 @@ const work = {
   // All projects will be listed on the /home and /work routes
 };
 
-const gallery = {
-  label: "Gallery",
-  title: "My photo gallery",
-  description: `A photo collection by ${person.name}`,
-  // Images from https://pexels.com
-  images: [
-    {
-      src: "/images/gallery/img-01.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-02.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-03.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-04.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-05.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-06.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-07.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-08.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-09.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-10.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-11.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-12.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-13.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-14.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-  ],
-};
+
 // #endregion
-export { person, social, newsletter, home, about, blog, work, gallery, gravebornBlog };
+export { person, social, newsletter, home, about, blog, work, gallery, codex };
+
+
+// const gallery = {
+//   label: "Gallery",
+//   title: "My photo gallery",
+//   description: `A photo collection by ${person.name}`,
+//   // Images from https://pexels.com
+//   images: [
+//     {
+//       src: "/images/gallery/img-01.jpg",
+//       alt: "image",
+//       orientation: "vertical",
+//     },
+//     {
+//       src: "/images/gallery/img-02.jpg",
+//       alt: "image",
+//       orientation: "horizontal",
+//     },
+//     {
+//       src: "/images/gallery/img-03.jpg",
+//       alt: "image",
+//       orientation: "vertical",
+//     },
+//     {
+//       src: "/images/gallery/img-04.jpg",
+//       alt: "image",
+//       orientation: "horizontal",
+//     },
+//     {
+//       src: "/images/gallery/img-05.jpg",
+//       alt: "image",
+//       orientation: "horizontal",
+//     },
+//     {
+//       src: "/images/gallery/img-06.jpg",
+//       alt: "image",
+//       orientation: "vertical",
+//     },
+//     {
+//       src: "/images/gallery/img-07.jpg",
+//       alt: "image",
+//       orientation: "horizontal",
+//     },
+//     {
+//       src: "/images/gallery/img-08.jpg",
+//       alt: "image",
+//       orientation: "vertical",
+//     },
+//     {
+//       src: "/images/gallery/img-09.jpg",
+//       alt: "image",
+//       orientation: "horizontal",
+//     },
+//     {
+//       src: "/images/gallery/img-10.jpg",
+//       alt: "image",
+//       orientation: "horizontal",
+//     },
+//     {
+//       src: "/images/gallery/img-11.jpg",
+//       alt: "image",
+//       orientation: "vertical",
+//     },
+//     {
+//       src: "/images/gallery/img-12.jpg",
+//       alt: "image",
+//       orientation: "horizontal",
+//     },
+//     {
+//       src: "/images/gallery/img-13.jpg",
+//       alt: "image",
+//       orientation: "horizontal",
+//     },
+//     {
+//       src: "/images/gallery/img-14.jpg",
+//       alt: "image",
+//       orientation: "horizontal",
+//     },
+//   ],
+// };

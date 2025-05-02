@@ -46,6 +46,9 @@ export default function Post({ post, thumbnail }: PostProps) {
           <Heading as="h2" variant="heading-strong-l" wrap="balance">
             {post.metadata.title}
           </Heading>
+          <Text variant="body-default-s" onBackground="neutral-medium">
+            {post.metadata.summary}
+          </Text>
           <Text variant="label-default-s" onBackground="neutral-weak">
             {post.metadata.publishedAt && formatDate(post.metadata.publishedAt, false)}
           </Text>
