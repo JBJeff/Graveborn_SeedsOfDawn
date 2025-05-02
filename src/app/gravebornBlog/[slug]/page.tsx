@@ -3,7 +3,7 @@ import { CustomMDX } from "@/components/mdx";
 import { getPosts } from "@/app/utils/utils";
 import { AvatarGroup, Button, Column, Heading, Row, Text } from "@/once-ui/components";
 import { baseURL } from "@/app/resources";
-import { person,gravebornBlog } from "@/app/resources/content/de";
+import { person } from "@/app/resources/content/de";
 import { formatDate } from "@/app/utils/formatDate";
 import ScrollToHash from "@/components/ScrollToHash";
 
@@ -14,14 +14,15 @@ interface BlogParams {
 }
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
-  const posts = getPosts(["src", "app", "gravebornBlog", "posts"]);
+  const posts = getPosts(["src", "app", "gravebornblog", "posts"]);
+  console.log(">>> GRAVEBLOG SLUGS:", posts.map((p) => p.slug));
   return posts.map((post) => ({
     slug: post.slug,
   }));
 }
 
 export function generateMetadata({ params: { slug } }: BlogParams) {
-  let post = getPosts(["src", "app", "gravebornBlog", "posts"]).find((post) => post.slug === slug);
+  let post = getPosts(["src", "app", "gravebornblog", "posts"]).find((post) => post.slug === slug);
 
   if (!post) {
     return;
@@ -45,7 +46,7 @@ export function generateMetadata({ params: { slug } }: BlogParams) {
       description,
       type: "article",
       publishedTime,
-      url: `https://${baseURL}/gravebornBlog/${post.slug}`,
+      url: `https://${baseURL}/gravebornblog/${post.slug}`,
       images: [
         {
           url: ogImage,
@@ -62,7 +63,7 @@ export function generateMetadata({ params: { slug } }: BlogParams) {
 }
 
 export default function Blog({ params }: BlogParams) {
-  let post = getPosts(["src", "app", "gravebornBlog", "posts"]).find((post) => post.slug === params.slug);
+  let post = getPosts(["src", "app", "gravebornblog", "posts"]).find((post) => post.slug === params.slug);
 
   if (!post) {
     notFound();
@@ -89,7 +90,7 @@ export default function Blog({ params }: BlogParams) {
             image: post.metadata.image
               ? `https://${baseURL}${post.metadata.image}`
               : `https://${baseURL}/og?title=${post.metadata.title}`,
-            url: `https://${baseURL}/gravebornBlog/${post.slug}`,
+            url: `https://${baseURL}/gravebornblog/${post.slug}`,
             author: {
               "@type": "Person",
               name: person.name,
@@ -97,7 +98,7 @@ export default function Blog({ params }: BlogParams) {
           }),
         }}
       />
-      <Button href="/gravebornBlog" weight="default" variant="tertiary" size="s" prefixIcon="chevronLeft">
+      <Button href="/gravebornblog" weight="default" variant="tertiary" size="s" prefixIcon="chevronLeft">
         Posts
       </Button>
       <Heading variant="display-strong-s">{post.metadata.title}</Heading>

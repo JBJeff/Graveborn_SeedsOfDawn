@@ -111,20 +111,20 @@ export const GravebornHeader = () => {
               
             
              {/* BLOG | News + Updates + Devlogs zentral in einer Seite, Tags */}
-             {routes["/gravebornBlog"] && (
+             {routes["/gravebornblog"] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
                     //prefixIcon="person"
-                    href="/gravebornBlog"
+                    href="/gravebornblog"
                     label={gravebornBlog.label}
-                    selected={pathname === "/gravebornBlog"}
+                    selected={pathname === "/gravebornblog"}
                   />
                   <ToggleButton
                     className="s-flex-show"
                     //prefixIcon="person"
-                    href="/gravebornBlog"
-                    selected={pathname === "/gravebornBlog"}
+                    href="/gravebornblog"
+                    selected={pathname === "/gravebornblog"}
                   />
                 </>
               )}
